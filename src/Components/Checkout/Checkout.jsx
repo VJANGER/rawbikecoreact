@@ -1,7 +1,7 @@
 import { useRef } from "react"
-import { useCarritoContext } from "../../context/CartContext"
+import { useCarritoContext } from "../../Context/CartContext"
 import { Link, useNavigate } from "react-router-dom"
-import { createOrdenCompra, getProduct, updateProduct } from "../../firebase/firebase"
+import { createOrdenCompra, getProduct, updateProduct } from "../../Firebase/Firebase"
 import { toast } from "react-toastify"
 
 export const Checkout = () => {

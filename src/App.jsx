@@ -1,19 +1,18 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { DarkModeProvider } from '../context/DarkModeContext.js';
-import { Navbar } from './Navbar/Navbar';
-import { ItemListContainer } from './ItemListContainer/ItemListContainer';
-import { ItemDetailContainer } from './ItemDetailContainer/ItemDetailContainer';
-import { Checkout } from './Checkout/Checkout';
-import { Cart } from './Cart/Cart';
-
-import { createProducts } from '../firebase/firebase.js';
+import { DarkModeProvider } from "../src/Context/DarkModeContext";
+import { NavBar } from "./Components/NavBar/NavBar";
+import { ItemListContainer } from "./Components/ItemListContainer/ItemListContainer";
+import { ItemDetailContainer } from "./Components/ItemDetailContainer/ItemDetailContainer";
+import { Checkout } from "./Components/Checkout/Checkout";
+import { Cart } from "./Components/Cart/Cart";
+import { createProducts } from "./Firebase/Firebase";
 export const App = () => {
   return (
     <>
       <BrowserRouter>
         <DarkModeProvider>
-          <Navbar />
+          <NavBar />
           <Routes>
 
             <Route path='/' element={<ItemListContainer />} />

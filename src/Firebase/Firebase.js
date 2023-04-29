@@ -11,7 +11,9 @@ const firebaseConfig = {
   measurementId: "G-08XVHVX8Q6"
 };
 const db = getFirestore()
+
 const app = initializeApp(firebaseConfig);
+
 const createProducts = async () =>{
   const promise = await fetch('./json/productos.json')
   const productos = await promise.json()

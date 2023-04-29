@@ -1,4 +1,4 @@
-import { useCarritoContext } from "../../context/CartContext"
+import { useCarritoContext } from "../../Context/CartContext"
 export const ItemCart = ({ item }) => {
     const { removeItem } = useCarritoContext()
     return (

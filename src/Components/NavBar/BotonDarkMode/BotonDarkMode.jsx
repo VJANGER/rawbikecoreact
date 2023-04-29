@@ -1,4 +1,4 @@
-import { useDarkModeContext } from '../../../context/DarkModeContext.js';
+import { useDarkModeContext } from '../../../Context/DarkModeContext';
 
 export const BotonDarkMode = () => {
 
