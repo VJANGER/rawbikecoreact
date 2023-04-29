@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
-import CartWidget from "../CartWidget/CartWidget"
+import {CartWidget} from "../CartWidget/CartWidget"
 import logo from "../../logo.png"
+import { BotonDarkMode } from "./BotonDarkMode/BotonDarkMode"
 
 
 export const NavBar = () => {
@@ -47,6 +48,7 @@ export const NavBar = () => {
             </div>
         </div>
     <CartWidget/>
+    <BotonDarkMode />
 </nav>
   )
 }

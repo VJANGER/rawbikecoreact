@@ -1,10 +1,12 @@
 import { ItemCount } from "../ItemCount/ItemCount"
+import { useCarritoContext } from "../../context/CartContext"
+export const ItemDetail = ({ item }) => {
+    const { addItem } = useCarritoContext()
 
-export const ItemDetail = ({item}) => {
     const onAdd = (contador) => {
-        console.log(contador)
-        console.log(item)
+        addItem(item, contador)
     }
+
     return(
         <div className="container-fluid d-flex flex-col h-100 m-4">
         <div className="col-md-12">

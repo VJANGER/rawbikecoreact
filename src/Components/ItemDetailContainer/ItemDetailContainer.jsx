@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react"
+import { ItemDetail } from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom"
-import {ItemDetail} from "../ItemDetail/ItemDetail"
+import { getProduct } from "../../firebase/firebase.js"
+export const ItemDetailContainer = () => {
 
-export const ItemDetailConatiner = () =>{
     const [item, setItem] = useState([])
-    const {id} = useParams()
+    const { id } = useParams()
+
     useEffect(() => {
-        fetch('../json/productos.json')
-        .then(response => response.json())
-        .then (productos => {
-            const prod = productos.find(prod => prod.id === (id))
-            setItem(prod)
-        })
-    }, [id])
+        getProduct(id).then(prod => setItem(prod))
+
+    }, [])
+
     return(
         <div>
             <ItemDetail item={item}/>
