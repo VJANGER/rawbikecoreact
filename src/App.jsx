@@ -8,6 +8,7 @@ import { Checkout } from "./Components/Checkout/Checkout";
 import { Cart } from "./Components/Cart/Cart";
 import { createProducts } from "./Firebase/Firebase";
 export const App = () => {
+  //createProducts()
   return (
     <>
       <BrowserRouter>

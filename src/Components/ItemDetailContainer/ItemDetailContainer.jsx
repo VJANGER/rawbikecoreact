@@ -10,7 +10,7 @@ export const ItemDetailContainer = () => {
     useEffect(() => {
         getProduct(id).then(prod => setItem(prod))
 
-    }, [])
+    }, [id])
 
     return(
         <div>

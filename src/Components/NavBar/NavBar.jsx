@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import {CartWidget} from "../CartWidget/CartWidget"
-import logo from "../../logo.png"
+import logo from "https://firebasestorage.googleapis.com/v0/b/rawbikeco-80622.appspot.com/o/logo.png?alt=media&token=29384f00-0378-4543-8d61-0adc83ba2b61"
 import { BotonDarkMode } from "./BotonDarkMode/BotonDarkMode"
 
 

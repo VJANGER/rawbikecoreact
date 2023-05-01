@@ -14,7 +14,7 @@ const db = getFirestore()
 
 const app = initializeApp(firebaseConfig);
 
-const createProducts = async () =>{
+export const createProducts = async () =>{
   const promise = await fetch('./json/productos.json')
   const productos = await promise.json()
   productos.forEach(async (prod) =>{
@@ -43,4 +43,31 @@ export const getProduct = async (id) => {
   const prod = await getDoc(doc(db, "productos", id))
   const item = { ...prod.data(), id: prod.id }
   return item
+}
+export const updateProduct = async (id, info) => {
+  await updateDoc(doc(db, "productos", id), info)
+}
+
+export const deleteProduct = async (id) => {
+  await deleteDoc(doc(db, "productos", id))
+}
+
+export const createOrdenCompra = async (cliente, precioTotal, carrito, fecha) => {
+  const ordenCompra = await addDoc(collection(db, "ordenCompra"), {
+      cliente: cliente,
+      items: carrito,
+      precioTotal: precioTotal,
+      fecha: fecha
+  })
+  return ordenCompra
+}
+
+export const getOrdenCompra = async (id) => {
+  const ordenCompra = await getDoc(doc(db, "ordenCompra", id))
+  const item = { ...ordenCompra.data(), id: ordenCompra.id }
+  return item
+}
+
+export const deleteOrdenCompra = async (id) => {
+  await deleteDoc(doc(db, "ordenCompra", id))
 }
