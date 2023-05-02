@@ -19,15 +19,15 @@ export const createProducts = async () =>{
   const productos = await promise.json()
   productos.forEach(async (prod) =>{
     await addDoc(collection(db, "productos"), {
-      nombre: productos.nombre,
-      precio: productos.precio,
-      categoria: productos.categoria,
-      img: productos.img,
-      color: productos.color,
-      talle: productos.talle,
-      talleEspecial: productos.talleEspecial,
-      descripcion: productos.descripcion,
-      stock: productos.stock
+      nombre: prod.nombre,
+      precio: prod.precio,
+      categoria: prod.categoria,
+      img: prod.img,
+      color: prod.color,
+      talle: prod.talle,
+      talleEspecial: prod.talleEspecial,
+      descripcion: prod.descripcion,
+      stock: prod.stock
     })
   })
 }
