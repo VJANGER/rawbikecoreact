@@ -7,9 +7,10 @@ const firebaseConfig = {
   projectId: "rawbikeco-80622",
   storageBucket: "rawbikeco-80622.appspot.com",
   messagingSenderId: "345320320196",
-  appId: "1:345320320196:web:d241a78d760a60d3cb2d91",
-  measurementId: "G-08XVHVX8Q6"
+  appId: "1:345320320196:web:d241a78d760a60d3cb2d91"
 };
+
+
 const db = getFirestore()
 
 const app = initializeApp(firebaseConfig);
@@ -31,6 +32,7 @@ export const createProducts = async () =>{
     })
   })
 }
+
 export const getProducts = async () => {
   const prods = await getDocs(collection(db, "productos"))
   const items = prods.docs.map(prod => {

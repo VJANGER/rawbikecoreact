@@ -15,7 +15,6 @@ export const App = () => {
         <DarkModeProvider>
           <NavBar />
           <Routes>
-
             <Route path='/' element={<ItemListContainer />} />
             <Route path='/category/:category' element={<ItemListContainer />} />
             <Route path='/product/:id' element={<ItemDetailContainer />} />
@@ -25,7 +24,6 @@ export const App = () => {
           </Routes>
         </DarkModeProvider>
       </BrowserRouter>
-
     </>
 
   )

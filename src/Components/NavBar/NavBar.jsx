@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
 import {CartWidget} from "../CartWidget/CartWidget"
-import logo from "https://firebasestorage.googleapis.com/v0/b/rawbikeco-80622.appspot.com/o/logo.png?alt=media&token=29384f00-0378-4543-8d61-0adc83ba2b61"
 import { BotonDarkMode } from "./BotonDarkMode/BotonDarkMode"
 
 
@@ -9,7 +8,7 @@ export const NavBar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark">
             <div className="container-fluid">
                 <Link className="nav-link" to={"/"}>
-                <img className="imgLogo" src={logo} alt="logo" />
+                <img className="imgLogo" src="https://firebasestorage.googleapis.com/v0/b/rawbikeco-80622.appspot.com/o/logo.png?alt=media&token=29384f00-0378-4543-8d61-0adc83ba2b61" alt="logo" />
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span className="navbar-toggler-icon"></span></button>
             <div className="collapse navbar-collapse justify-content-end align-items-center" id="navbarNavDropdown">
