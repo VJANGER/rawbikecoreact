@@ -1,8 +1,8 @@
 import { useState, createContext, useContext,  } from "react";
 
-const carritoContext = createContext ()
+const CarritoContext = createContext ()
 
-export const useCarritoContext = () => useContext(carritoContext)
+export const useCarritoContext = () => useContext(CarritoContext)
 
 export const CarritoProvider = (props) => {
     const [carrito, setCarrito] = useState ([])
@@ -37,8 +37,8 @@ export const CarritoProvider = (props) => {
             return carrito.reduce((acum,prod) => acum += (prod.quantity * prod.precio), 1)
         }
         return(
-            <CarritoProvider value={{carrito, addItem, removeItem, emptyCart, getItemQuantity, totalPrice}}>
+            <CarritoContext.Provider value={{carrito, addItem, removeItem, emptyCart, getItemQuantity, totalPrice}}>
                 {props.children}
-            </CarritoProvider>
+            </CarritoContext.Provider>
         )
 }

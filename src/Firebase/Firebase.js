@@ -11,9 +11,9 @@ const firebaseConfig = {
 };
 
 
-const db = getFirestore()
 
 const app = initializeApp(firebaseConfig);
+const db = getFirestore()
 
 export const createProducts = async () =>{
   const promise = await fetch('./json/productos.json')

@@ -14,8 +14,8 @@ export const DarkModeProvider = (props) => {
         }
     }
     return(
-        <DarkModeContext.provider value={{darkMode, toggleDarkMode}}>
+        <DarkModeContext.Provider value={{darkMode, toggleDarkMode}}>
             {props.children}
-        </DarkModeContext.provider>
+        </DarkModeContext.Provider>
     )
 }
