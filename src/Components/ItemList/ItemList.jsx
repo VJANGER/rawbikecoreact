@@ -6,7 +6,7 @@ export const ItemList = ({ productos, plantilla }) => {
             {
                 plantilla === "Item"
                     ?
-                    productos.map(producto => <Item key={producto.id} item={producto} />)
+                    productos.map(productos => <Item key={productos.id} item={productos} />)
                     :
                     productos.map(producto => <ItemCart key={producto.id} item={producto} />)
             }

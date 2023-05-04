@@ -1,5 +1,5 @@
+import './botonDarkMode.css'
 import { useDarkModeContext } from '../../../Context/DarkModeContext';
-
 export const BotonDarkMode = () => {
 
     const { toggleDarkMode } = useDarkModeContext()

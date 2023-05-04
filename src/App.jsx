@@ -7,6 +7,7 @@ import { ItemListContainer } from "./Components/ItemListContainer/ItemListContai
 import { ItemDetailContainer } from "./Components/ItemDetailContainer/ItemDetailContainer";
 import { Checkout } from "./Components/Checkout/Checkout";
 import { Cart } from "./Components/Cart/Cart";
+import { ToastContainer } from 'react-toastify';
 import { createProducts } from "./Firebase/Firebase.js";
 export const App = () => {
   //useEffect(() => {createProducts()},[])
