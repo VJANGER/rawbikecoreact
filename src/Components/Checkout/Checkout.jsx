@@ -23,8 +23,17 @@ export const Checkout = () => {
                 if (prodBBD.stock >= prodCarrito.quantity) {
                     prodBBD.stock -= prodCarrito.quantity
                     updateProduct(prodBBD.id, prodBBD)
-                } else {
-                    console.log("El stock no es mayor o igual a la cantidad que se quiere comprar")
+                } else {toast("El stock no es mayor o igual a la cantidad que se quiere comprar", {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                });
+                    console.log()
                 }
             })
         })
@@ -32,14 +41,13 @@ export const Checkout = () => {
 
         createOrdenCompra(cliente, totalPrice(), aux2, new Date().toLocaleString('es-AR', { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone }))
             .then(ordenCompra => {
-                console.log()
-                toast(` 🛒 Muchas gracias por comprar con nosotros, su ID de compra es ${ordenCompra.id} por un total de ${totalPrice()}, en breve nos contactaremos para el envio`, {
-                    position: "top-right",
+                toast.success(`Muchas gracias por comprar con nosotros, su ID de compra es ${ordenCompra.id} por un total de ${totalPrice()}, en breve nos contactaremos para el envio`, {
+                    position: "bottom-left",
                     autoClose: 5000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
-                    draggable: true,
+                    draggable: false,
                     progress: undefined,
                     theme: "dark",
                 });

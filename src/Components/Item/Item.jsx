@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom"
 export const Item = ({ item }) => {
         return (
-            <div className="card container d-flex flex-col h-100">
-            <div className="col-md-12">
+            
+            <div className="card col-3 d-flex flex-col h-100">
+            <div className="col-12">
                 <div className="card-body">
                     <h3 className="card-title">{item.nombre}</h3>
-                    <img src={item.img} alt={item.name} className="img-fluid round-start card-img-top"/>
+                    <img src={item.img} alt={item.name} className="card-img-top"/>
                     <p className="card-text">Color: {item.color}</p>
                     <p className="card-text">Talle: {item.talle}</p>
                     <p className="card-text">Talles especiales: {item.talleEspecial}</p>

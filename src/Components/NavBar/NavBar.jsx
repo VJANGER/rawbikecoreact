@@ -4,8 +4,8 @@ import { BotonDarkMode } from "./BotonDarkMode/BotonDarkMode"
 
 
 export const NavBar = () => {
-  return (
-    <nav className="navbar navbar-expand-lg navbar-dark">
+    return (
+        <nav className="navbar navbar-expand-lg navbar-dark">
             <div className="container-fluid">
                 <Link className="nav-link" to={"/"}>
                 <img className="imgLogo logo" src="https://firebasestorage.googleapis.com/v0/b/rawbikeco-80622.appspot.com/o/logo.png?alt=media&token=29384f00-0378-4543-8d61-0adc83ba2b61" alt="logo" />

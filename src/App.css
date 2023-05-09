@@ -3,13 +3,7 @@
 }
 .cardBodyDark {
     background-color: hsl(0, 0%, 33%);
-    margin-bottom: 3px;
     text-align: center;
-}
-
-.cantCarrito {
-    position: relative;
-    left: 15%;
 }
 
 .darkMode {

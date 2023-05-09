@@ -14,7 +14,7 @@ export const ItemListContainer = () => {
     if (category) {
       getProducts()
         .then(productos => {
-          const productosFiltrados = productos.filter(prod => prod.stock > 0).filter(prod => prod.idCategoria === parseInt(category))
+          const productosFiltrados = productos.filter(prod => prod.stock > 0).filter(prod => prod.categoria === (category))
           setProductos(productosFiltrados)
 
         })
@@ -30,7 +30,7 @@ export const ItemListContainer = () => {
   }, [category])
 
   return (
-    <div>
+    <div className="row">
       {<ItemList productos={productos} plantilla={"Item"} />}
     </div>
   )
