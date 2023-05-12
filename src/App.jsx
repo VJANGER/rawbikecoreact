@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { DarkModeProvider } from "../src/Context/DarkModeContext";
 import { NavBar } from "./Components/NavBar/NavBar";
@@ -8,7 +8,8 @@ import { ItemDetailContainer } from "./Components/ItemDetailContainer/ItemDetail
 import { Checkout } from "./Components/Checkout/Checkout";
 import { Cart } from "./Components/Cart/Cart";
 import { ToastContainer } from 'react-toastify';
-import { createProducts } from "./Firebase/Firebase.js";
+import 'react-toastify/dist/ReactToastify.css';
+// import { createProducts } from "./Firebase/Firebase.js";
 export const App = () => {
   //useEffect(() => {createProducts()},[])
   return (

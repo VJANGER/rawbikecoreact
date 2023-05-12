@@ -7,14 +7,16 @@ export const Cart = () => {
         <>
             {
                 carrito.length === 0 ?
-                    <>
+                    <div className="text-center p-5 m-5">
                         <h1>Carrito Vacio</h1>
                         <button className="btn btn-dark"><Link to={"/"} className="nav-link">Continuar comprando</Link></button>
-                    </>
+                    </div>
                     :
-                    <div className="container cartContainer">
+                    <div className="    ">
+                        <div className="    ">
                         {<ItemList productos={carrito} plantilla={"ItemCart"} />}
-                        <div className="cartButtons">
+                        </div>
+                        <div className="    ">
                             <p>Resumen de la compra: {totalPrice()}</p>
                             <button className="btn btn-danger" onClick={() => emptyCart()}>Vaciar Carrito</button>
                             <Link className="nav-link" to={"/"}><button className="btn btn-dark">Continuar Comprando</button></Link>

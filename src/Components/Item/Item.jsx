@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom"
 export const Item = ({ item }) => {
         return (
-            
-            <div className="card col-3 d-flex flex-col h-100">
+            <div className="card col-3 g-5 h-100">
             <div className="col-12">
                 <div className="card-body">
                     <h3 className="card-title">{item.nombre}</h3>

@@ -5,16 +5,16 @@ import { BotonDarkMode } from "./BotonDarkMode/BotonDarkMode"
 
 export const NavBar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark">
+        <nav className="navbar navbar-expand-lg barra">
             <div className="container-fluid">
                 <Link className="nav-link" to={"/"}>
                 <img className="imgLogo logo" src="https://firebasestorage.googleapis.com/v0/b/rawbikeco-80622.appspot.com/o/logo.png?alt=media&token=29384f00-0378-4543-8d61-0adc83ba2b61" alt="logo" />
                 </Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span className="navbar-toggler-icon"></span></button>
-            <div className="collapse navbar-collapse justify-content-end align-items-center" id="navbarNavDropdown">
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span className="navbar-toggler-icon texto"></span></button>
+            <div className="collapse navbar-collapse justify-content-end align-items-center texto" id="navbarNavDropdown">
                 <ul className="navbar-nav justify-content-end align-items-center">
                     <li className="nav-item dropdown">
-                        <p className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</p>
+                        <p className="nav-link dropdown-toggle texto" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</p>
                         <ul className="dropdown-menu">
                             <li>
                             <Link className="nav-link" to={"/category/cuadros"}>
@@ -38,11 +38,6 @@ export const NavBar = () => {
                             </li>
                         </ul>
                     </li>
-                <li className="nav-item">
-                    <p className="nav-link">Quién somos</p>
-                </li>
-                <li className="nav-item">
-                    <p className="nav-link">Contacto</p></li>
                 </ul>
             </div>
         </div>

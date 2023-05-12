@@ -13,8 +13,10 @@ export const ItemDetailContainer = () => {
     }, [id])
 
     return(
-        <div>
+        
+        <div className="row">
             <ItemDetail item={item}/>
         </div>
+        
     )
 }

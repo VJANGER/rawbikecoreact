@@ -30,7 +30,7 @@ export const ItemListContainer = () => {
   }, [category])
 
   return (
-    <div className="row">
+    <div className="row m-auto">
       {<ItemList productos={productos} plantilla={"Item"} />}
     </div>
   )

@@ -8,12 +8,12 @@ export const ItemDetail = ({ item }) => {
     }
 
     return(
-        <div className="d-flex flex-col h-100 m-4">
-            <div className="col-md-12">
-                <div className="card-body">
+        <div className="d-flex flex-col justify-content-center">
+            <div className="col-10">
+                <div className="card-body p-5">
                     <h3 className="card-title">{item.nombre}</h3>
                     <div className="d-flex flex-row gap-5 p-5">
-                    <img src={item.img} alt={item.name} className="img-fluid round-start card-img-top"/>
+                    <img src={item.img} alt={item.name} className="image-fluid round-start card-img-top"/>
                     <div>
                         <p className="card-text">Color: {item.color}</p>
                         <p className="card-text">Talle: {item.talle}</p>
