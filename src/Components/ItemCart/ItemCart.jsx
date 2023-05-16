@@ -2,13 +2,12 @@ import { useCarritoContext } from "../../Context/CartContext"
 export const ItemCart = ({ item }) => {
     const { removeItem } = useCarritoContext()
     return (
-        <div className="card d-flex justify-content-center">
-            <div className="row ">
-                <div className="    ">
-                    <img src={item.img} className="img-fluid rounded-start" alt={`Imagen de ${item.nombre}`} />
+            <div className="d-flex flex-row">
+                <div className="col-8">
+                    <img src={item.img} className="img-fluid rounded-start col-8" alt={`Imagen de ${item.nombre}`} />
                 </div>
-                <div className="    ">
-                    <div className="card-body d-flex flex-column justify-content-center align-items-center flex-wrap">
+                <div className="col-4">
+                    <div className="card-body d-flex flex-column justify-content-start align-items-center flex-wrap">
                         <h5 className="card-title">{item.nombre}</h5>
                         <p className="card-text">Cantidad: {item.quantity}</p>
                         <p className="card-text">Precio Unitario:$ {item.precio}</p>
@@ -17,6 +16,5 @@ export const ItemCart = ({ item }) => {
                     </div>
                 </div>
             </div>
-        </div>
     )
 }

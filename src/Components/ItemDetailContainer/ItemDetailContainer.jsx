@@ -13,10 +13,8 @@ export const ItemDetailContainer = () => {
     }, [id])
 
     return(
-        
-        <div className="row">
+        <div className="d-flex flex-row">
             <ItemDetail item={item}/>
         </div>
-        
     )
 }

@@ -2,7 +2,6 @@ import { Link } from "react-router-dom"
 export const Item = ({ item }) => {
         return (
             <div className="card col-3 g-5 h-100">
-            <div className="col-12">
                 <div className="card-body">
                     <h3 className="card-title">{item.nombre}</h3>
                     <img src={item.img} alt={item.name} className="card-img-top"/>
@@ -14,7 +13,6 @@ export const Item = ({ item }) => {
                     <Link className='nav-link' to={`/product/${item.id}`}><button className="btn btn-dark">Ver Producto</button></Link>
                 </div>
             </div>
-        </div>
         )
 }
 

@@ -12,11 +12,11 @@ export const Cart = () => {
                         <button className="btn btn-dark"><Link to={"/"} className="nav-link">Continuar comprando</Link></button>
                     </div>
                     :
-                    <div className="    ">
-                        <div className="    ">
+                    <div className="row m-5 p-5">
+                        <div className="col-6 m-5">
                         {<ItemList productos={carrito} plantilla={"ItemCart"} />}
                         </div>
-                        <div className="    ">
+                        <div className="  col-4  ">
                             <p>Resumen de la compra: {totalPrice()}</p>
                             <button className="btn btn-danger" onClick={() => emptyCart()}>Vaciar Carrito</button>
                             <Link className="nav-link" to={"/"}><button className="btn btn-dark">Continuar Comprando</button></Link>
